@@ -1,0 +1,58 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Register{% endblock title %}
+{% block content %}
+<!-- banner -->
+<div class="" id="home">
+    <div class="layer">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 banner-text-w3pvt">
+                    <!-- banner slider-->
+                    
+                    <!-- //banner slider-->
+                </div>
+                <div class="col-8 px-0 mb-5 ">
+                    <div class="banner-form-w3 ml-lg-5">
+                        <div class="padding">
+                            <!-- banner form -->
+                            <form action="" method="post" >
+                                {% csrf_token %}
+                                <h5 class="mb-3">Register The student details</h5>
+                                <div class="form-style-w3ls">
+                                    <label for="fname">First Name</label>
+                                    <input value="{{s.Stu_Fname}}" name="fname" type="text" id="fname" required="">
+                                    <label for="">Last Name</label>
+                                    <input value="{{s.Stu_Lname}}" name="lname" type="text" required="">
+                                    
+                                    
+                                    <label for="">Email Id</label>
+                                    <input value="{{s.Stu_Email}}" name="email" type="email" required="">
+                                    <label for="">Age</label>
+                                    <input value="{{s.Stu_Age}}" name="age" type="age" required="">
+                                    <label for="">Contact Number</label>
+                                    <input value="{{s.Stu_Number}}" name="number" type="text" required="">
+        
+                                    <label for="">Course</label>
+                                    <select name='sel'>
+                                        {% for c in cor %}
+                                        <option {% if s.Stu_Course.id == c.id %}selected{% endif %} value="{{c.id}}">{{c.Course_Name}}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <label for="addr">Address</label>
+                                    <textarea class="form-control" name="addr" id="addr">{{s.Stu_Address}}</textarea>
+                                    <button Class="btn mt-3" type="submit">Update</button>
+                                    
+                                </div>
+                            </form>
+                            <!-- //banner form -->
+                            <a href="{% url "student_list" %}">Students</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+{% endblock content %}

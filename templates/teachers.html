@@ -1,0 +1,57 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Teachers{% endblock title %}
+{% block content %}
+<!-- banner -->
+<div class="" id="home">
+    <div class="layer">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-8 px-0 mb-5 ">
+                    <div class="banner-form-w3 ">
+                        <div class="    ">
+                            <!-- Team  -->
+                            <div class="container mt-5">
+                                <h1 class="  mb-4">Teachers</h1>
+                                
+                                <table class="table">
+                                    <tr>
+                                        <td>First Name</td>
+                                        <td>Last Name</td>
+                                        <td>Email Id</td>
+                                        <td>Age</td>
+                                        <td>Contact Number</td>
+                                        <td>Course</td>
+                                        <td>Address</td>
+                                        <td>Photo</td>
+                                        <td colspan="2">Action</td>
+                                    </tr>
+                                    {% for t in teach %}
+                                    <tr>
+                                        <td>{{t.user.first_name}}</td>
+                                        <td>{{t.user.last_name}}</td>
+                                        <td>{{t.user.email}}</td>
+                                        <td>{{t.Teach_Age}}</td>
+                                        <td>{{t.Teach_Number}}</td>
+                                        <td>{{t.course.Course_Name}}</td>
+                                        <td>{{t.Teach_Address}}</td>
+                                        <td><img src="{{t.Teach_Image.url}}" width="100px"></td>
+                                        <td><a href="{% url "edit" t.user.id %}">Edit</a></td>
+                                        <td><a href="{% url "delete" t.user.id %}">Delete</a></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tablle>
+                                </div>
+                                        
+                                <!-- //Team -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+{% endblock content %}

@@ -1,0 +1,118 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<!-- banner -->
+<div class="banner" id="home">
+    <div class="layer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 banner-text-w3pvt">
+                    <!-- banner slider-->
+                    <div class="csslider infinity" id="slider1">
+                        
+                        <ul class="banner_slide_bg">
+                            <li>
+                                <div class="container-fluid">
+                                    <div class="w3ls_banner_txt">
+                                        <h3 class="b-w3ltxt text-capitalize mt-md-4">Education Courses.</h3>
+                                        <h4 class="b-w3ltxt text-capitalize mt-md-2">Study For Better Future</h4>
+                                        <p class="w3ls_pvt-title my-3">Invest in your education today for a successful and fulfilling tomorrow</p>
+                                        <a href="{% url "about" %}" class="btn btn-banner my-3">Read More</a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                    <!-- //banner slider-->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+
+<!-- what we Serve -->
+<section class="banner-bottom py-5" id="about">
+    <div class="container py-lg-5">
+        <h2 class="heading mb-sm-5 mb-4"> Build Your Career With Our Education System</h2>
+        <div class="row bottom-grids">
+            <div class="col-md-3 col-sm-6">
+                <div class="three-grids-w3pvt-1 d-flex text-right">
+                    <div class="text-effect-wthree midd-text-w3ls p-3 w-100">
+                        <h5 class="text-capitalize text-bl font-weight-bold">Facillities</h5>
+                        <p>Education</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-sm-0 mt-4">
+                <div class="three-grids-w3pvt-2 d-flex text-right">
+                    <div class="text-effect-wthree midd-text-w3ls p-3 w-100">
+                        <h5 class="text-capitalize text-bl font-weight-bold">Graduation</h5>
+                        <p>Education</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-md-0 mt-4">
+                <div class="three-grids-w3pvt-3 d-flex text-right">
+                    <div class="text-effect-wthree midd-text-w3ls p-3 w-100">
+                        <h5 class="text-capitalize text-bl font-weight-bold">Learning</h5>
+                        <p>Education</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-md-0 mt-4">
+                <div class="three-grids-w3pvt-4 d-flex text-right">
+                    <div class="text-effect-wthree midd-text-w3ls p-3 w-100">
+                        <h5 class="text-capitalize text-bl font-weight-bold">Success</h5>
+                        <p>Education</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <p class="mt-4">A quality education that equips students with the knowledge, skills, and critical thinking abilities necessary to excel in their chosen fields.We are proud to have a team of highly experienced and dedicated staff members who are passionate about teaching and mentoring students.</p>
+            </div>
+            <div class="col-lg-1 col-sm-4 col-5 ser-img">
+                <img src="{% static 'images/s1.png' %}" class="mt-4" alt="">
+                <img src="{% static 'images/s2.png' %}" class="mt-4" alt="">
+            </div>
+            <div class="col-lg-1 col-sm-4 col-5 ser-img">
+                <img src="{% static 'images/s3.png' %}" class="mt-4" alt="">
+                <img src="{% static 'images/s5.png' %}" class="mt-4" alt="">
+            </div>
+            <div class="col-lg-5">
+                <p class="mt-4">We provide comprehensive study materials that are carefully curated by our experienced faculty and are designed to complement classroom learning. Our college library is a treasure trove of knowledge, journals, and digital resources across a wide range of subjects.  </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //what we Serve -->
+
+<!-- footer -->
+<footer>
+    <div class="footer-layer py-sm-5 pt-5 pb-3">
+        <div class="container py-md-3">
+            <div class="footer-grid_section text-center">
+                <div class="footer-title mb-3">
+                    <a href="#"><img src="{% static 'images/s2.png' %}" alt=""> Child Learn</a>
+                </div>
+                <div class="footer-text">
+                    <p>Empowering minds and shaping futures, our college is where knowledge meets excellence, and dreams become reality.</p>
+                </div>
+                <ul class="social_section_1info">
+                    <li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                    <li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li class="google"><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                    <li class="linkedin"><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                    <li class="pinterest"><a href="#"><span class="fa fa-pinterest"></span></a></li>
+                    <li class="vimeo"><a href="#"><span class="fa fa-vimeo"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- //footer -->
+{% endblock content %}

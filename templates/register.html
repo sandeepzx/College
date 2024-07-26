@@ -1,0 +1,62 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Register{% endblock title %}
+{% block content %}
+<!-- banner -->
+<div class="" id="home">
+    <div class="layer">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 banner-text-w3pvt">
+                    <!-- banner slider-->
+                    
+                    <!-- //banner slider-->
+                </div>
+                <div class="col-8 px-0 mb-5 ">
+                    <div class="banner-form-w3 ml-lg-5">
+                        <div class="padding">
+                            <!-- banner form -->
+                            <form enctype="multipart/form-data" action="{% url "registerdb" %}" method="post" >
+                                {% csrf_token %}
+                                <h5 class="mb-3">Register and Join in our school</h5>
+                                <div class="form-style-w3ls">
+                                    <label for="fname">First Name</label>
+                                    <input placeholder="" name="fname" type="text" id="fname" required="">
+                                    <label for="">Last Name</label>
+                                    <input placeholder="Last Name" name="lname" type="text" required="">
+                                    <label for="">User Name</label>
+                                    <input placeholder="User Name" name="uname" type="text" required="">
+                                    <label for="">Password</label>
+                                    <input placeholder="Password" name="password" type="password" required="">
+                                    <label for="">Confirm Password</label>
+                                    <input placeholder="Password" name="cpassword" type="password" required="">
+                                    <label for="">Email Id</label>
+                                    <input placeholder="Your Email Id" name="email" type="email" required="">
+                                    <label for="">Age</label>
+                                    <input placeholder="Age" name="age" type="age" required="">
+                                    <label for="">Contact Number</label>
+                                    <input placeholder="Contact Number" name="number" type="text" required="">
+                                    <label for="">Upload Your photo</label>
+                                    <input  name="image" type="file" required="">
+                                    <label for="">Course</label>
+                                    <select name='sel'>
+                                        {% for c in cor %}
+                                        <option value="{{c.id}}">{{c.Course_Name}}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <label for="addr">Address</label>
+                                    <textarea class="form-control" name="addr" id="addr"></textarea>
+                                    <button Class="btn mt-3" type="submit"> Register</button>
+                                    
+                                </div>
+                            </form>
+                            <!-- //banner form -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+{% endblock content %}

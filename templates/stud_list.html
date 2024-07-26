@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Teachers{% endblock title %}
+{% block content %}
+<!-- banner -->
+<div class="" id="home">
+    <div class="layer">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-8 px-0 mb-5 ">
+                    <div class="banner-form-w3 ">
+                        <div class="    ">
+                            <!-- Team  -->
+                            <div class="container mt-5">
+                                <h1 class="  mb-4">Students</h1>
+                                
+                                <table class="table">
+                                    <tr>
+                                        <td>First Name</td>
+                                        <td>Last Name</td>
+                                        <td>Email Id</td>
+                                        <td>Age</td>
+                                        <td>Contact Number</td>
+                                        <td>Course</td>
+                                        <td>Address</td>
+                                        <td colspan="2">Action</td>
+                                    </tr>
+                                    {% for t in stud %}
+                                    <tr>
+                                        <td>{{t.Stu_Fname}}</td>
+                                        <td>{{t.Stu_Lname}}</td>
+                                        <td>{{t.Stu_Age}}</td>
+                                        <td>{{t.Stu_Email}}</td>
+                                        <td>{{t.Stu_Number}}</td>
+                                        <td>{{t.Stu_Course}}</td>
+                                        <td>{{t.Stu_Address}}</td>
+                                        
+                                        <td><a href="{% url "stud_edit" t.id %}">Edit</a></td>
+                                        <td><a href="{% url "stud_delete" t.id %}">Delete</a></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tablle>
+                                </div>
+                                        
+                                <!-- //Team -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!-- //banner -->
+{% endblock content %}

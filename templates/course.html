@@ -1,0 +1,42 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Register{% endblock title %}
+{% block content %}
+<!-- banner -->
+<div class="" id="home">
+    <div class="layer">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 banner-text-w3pvt">
+                    <!-- banner slider-->
+                    
+                    <!-- //banner slider-->
+                </div>
+                <div class="col-8 px-0 mb-5 ">
+                    <div class="banner-form-w3 ml-lg-5">
+                        <div class="padding">
+                            <!-- banner form -->
+                            <form action="{% url "coursedb" %}" method="post">
+                                <h5 class="mb-3">Add the courses</h5>
+                                {% csrf_token %}
+                                <div class="form-style-w3ls">
+                                    
+                                    <label for="">Course Name</label>
+                                    <input placeholder="Course Name" name="cname" type="text" required="">
+                                    <label for="">Course Fee</label>
+                                    <input placeholder="Fee" name="cfee" type="number" required="">
+                                    
+                                    <button Class="btn" type="submit"> Login</button>
+                                    
+                                </div>
+                            </form>
+                            <!-- //banner form -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+{% endblock content %}
